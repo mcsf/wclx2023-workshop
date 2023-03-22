@@ -1,0 +1,39 @@
+{
+	"name": "wclx2023-workshop",
+	"version": "0.1.0",
+	"description": "Pacote didáctico para a criação de blocos WordPress, WCLX2023",
+	"author": "Miguel Fonseca (https://profiles.wordpress.org/mcsf)",
+	"homepage": "https://lisboa.wordcamp.org/2023/session/cria-o-teu-proprio-bloco-gutenberg/",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start",
+		"env": "wp-env"
+	},
+	"devDependencies": {
+		"@types/wordpress__block-editor": "^11.0.1",
+		"@types/wordpress__components": "^23.0.1",
+		"@wordpress/env": "^5.11.0",
+		"@wordpress/scripts": "^25.3.0",
+		"eslint": "^8.34.0",
+		"eslint-config-standard": "^17.0.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-n": "^15.6.1",
+		"eslint-plugin-promise": "^6.1.1",
+		"eslint-plugin-react": "^7.32.2",
+		"typescript": "^4.9.5"
+	},
+	"dependencies": {
+		"@wordpress/icons": "^9.17.0",
+		"classnames": "^2.3.2"
+	},
+	"volta": {
+		"node": "18.15.0"
+	}
+}
