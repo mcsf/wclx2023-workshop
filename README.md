@@ -36,6 +36,9 @@ git clone git@github.com:mcsf/wclx2023-workshop.git
 cd wclx2023
 npm install
 
+# Verifica que o sistema é capaz de compilar o projecto
+npm run build
+
 # Cria sites de desenvolvimento e teste usando o pacote `@wordpress/env`. Isto
 # força o sistema a puxar as imagens Docker necessárias e a última versão
 # estável do WordPress. Uma vez os contentores Docker criados, pára os
