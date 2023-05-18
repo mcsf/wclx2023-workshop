@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name:       Example Static
- * Description:       Example block scaffolded with Create Block tool.
+ * Plugin Name:       Workshop de criação de blocos (WCLX2023)
+ * Description:       Plugin didáctico (WordCamp Lisboa 2023)
  * Requires at least: 6.1
  * Requires PHP:      7.0
  * Version:           0.1.0
