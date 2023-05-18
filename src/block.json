@@ -7,6 +7,7 @@
 	"category": "text",
 	"icon": "smiley",
 	"description": "A small widget displaying the current weather for a given city",
+	"parent": [ "wclx2023/weather-group" ],
 	"supports": {
 		"html": false,
 		"align": true,
