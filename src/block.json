@@ -1,17 +1,126 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "wclx2023/example-static",
+	"name": "wclx2023/multi-columns",
 	"version": "0.1.0",
-	"title": "Example Static",
-	"category": "text",
-	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"title": "Multi-Columns",
+	"category": "design",
+	"icon": "columns",
+	"description": "Displays content in newspaper style columns",
+	"parent": [ "core/post-content" ],
+	"keywords": [ "newspaper", "columns", "flow", "text" ],
 	"supports": {
-		"html": false
+		"html": true,
+		"color": true,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"align": [ "wide", "full" ]
 	},
-	"textdomain": "example-static",
+	"styles": [
+		{
+			"name": "default",
+			"label": "Default",
+			"isDefault": true
+		},
+		{
+			"name": "drop-cap",
+			"label": "Drop-Cap"
+		}
+	],
+	"example": {
+		"innerBlocks": [
+			{
+				"name": "core/heading",
+				"attributes": {
+					"level": 3,
+					"content": "Heading"
+				}
+			},
+			{
+				"name": "core/paragraph",
+				"attributes": {
+					"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin finibus, lectus non interdum cursus, arcu sapien mollis lacus, et tincidunt odio nisi ut purus. Duis eleifend, magna placerat faucibus tincidunt, orci nulla ornare tortor, eget egestas tortor nunc quis sem. Cras in tortor justo. "
+				}
+			},
+			{
+				"name": "core/heading",
+				"attributes": {
+					"level": 4,
+					"content": "Sub-heading"
+				}
+			},
+			{
+				"name": "core/paragraph",
+				"attributes": {
+					"content": "Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras vestibulum mauris diam. Praesent semper diam a efficitur iaculis. Nullam lacinia augue quis lorem accumsan tempus. Nulla consectetur leo vel blandit consectetur.Fusce quis sapien ante. Vestibulum non varius augue, et ultricies urna. Integer hendrerit suscipit nibh."
+				}
+			}
+		],
+		"attributes": {
+			"columnCount": 3,
+			"columnWidth": 80
+		},
+		"viewportWidth": 720
+	},
+	"textdomain": "multi-columns",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css"
+	"style": "file:./style-index.css",
+	"attributes": {
+		"style": {
+			"type": "object",
+			"default": {
+				"color": {
+					"text": "#3a3a3a",
+					"background": "#fbf9f4"
+				},
+				"spacing": {
+					"padding": {
+						"top": "20px",
+						"right": "20px",
+						"bottom": "20px",
+						"left": "20px"
+					}
+				}
+			}
+		},
+		"columnCount": {
+			"type": "integer",
+			"default": 4
+		},
+		"columnWidth": {
+			"type": "integer",
+			"default": 200
+		},
+		"columnGap": {
+			"type": "integer",
+			"default": 40
+		},
+		"columnRuleStyle": {
+			"type": "string",
+			"default": "solid"
+		},
+		"columnRuleWidth": {
+			"type": "integer",
+			"default": 1
+		},
+		"columnRuleColor": {
+			"type": "string",
+			"default": "#b8b8b8"
+		},
+		"dropCapColor": {
+			"type": "string",
+			"default": "#b8b8b8"
+		},
+		"dropCapSize": {
+			"type": "object",
+			"default": {
+				"size": "small",
+				"fontSize": "3.8rem",
+				"lineHeight": "3.5rem"
+			}
+		}
+	}
 }
