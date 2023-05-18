@@ -19,14 +19,6 @@
 	"attributes": {
 		"city": {
 			"type": "string"
-		},
-		"style": {
-			"type": "object",
-			"___default": {
-				"color": {
-					"background": "darkblue"
-				}
-			}
 		}
 	},
 	"render": "file:./render.php",
