@@ -1,16 +1,40 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "wclx2023/example-static",
+	"name": "wclx2023/weather",
 	"version": "0.1.0",
-	"title": "Example Static",
+	"title": "Weather",
 	"category": "text",
 	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "A small widget displaying the current weather for a given city",
 	"supports": {
-		"html": false
+		"html": false,
+		"align": true,
+		"color": true,
+		"spacing": {
+			"padding": true
+		}
 	},
-	"textdomain": "example-static",
+	"attributes": {
+		"city": {
+			"type": "string"
+		},
+		"style": {
+			"type": "object",
+			"___default": {
+				"color": {
+					"background": "darkblue"
+				}
+			}
+		}
+	},
+	"render": "file:./render.php",
+	"example": {
+		"attributes": {
+			"city": "OPO"
+		}
+	},
+	"textdomain": "wclx/weather",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"

@@ -21,6 +21,8 @@ import Edit from './edit';
 import save from './save';
 import metadata from './block.json';
 
+import './weather-block';
+
 /**
  * Every block starts by registering a new block type definition.
  *
